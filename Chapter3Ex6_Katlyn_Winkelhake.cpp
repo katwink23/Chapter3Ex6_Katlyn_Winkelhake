@@ -19,6 +19,7 @@ then displays the number of cups of each ingredient needed for the specified num
 
 #include <iostream>
 using namespace std;
+#include <iomanip>
 
 int main()
 {
@@ -30,6 +31,7 @@ int main()
 	cout << "How many cookies do you want to make?"<<endl;
 	cin >> newServing;
 
+	cout << setprecision(2) << fixed;
 	double conversion = newServing / serving;
 	double newSugar = sugar * conversion;
 	double newButter = butter * conversion;
